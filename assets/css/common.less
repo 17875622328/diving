@@ -1,0 +1,247 @@
+// 头部
+.header{
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    
+    .navbar{
+        background-color: #000;
+        border: 0;
+        margin-bottom: 0;
+        .container{
+            .collapse{
+                width: 100%;
+                .navbar-nav{
+                    margin-left: 19em;
+                    li{
+                        a{
+                            color: #fff;
+                            text-transform: uppercase;
+                            border-bottom: 3px solid transparent;
+                            transition: all linear .3s;
+                            padding-right: 2em;
+    
+                            &:hover{
+                                border-bottom: 3px solid #2583db;
+                            }
+                        }
+                    }
+                }
+    
+                .search{
+                    width: 6%;
+                    text-align: center;
+                    line-height: 3em;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1200px) {
+        &{
+            .navbar{
+                .container{
+                    .collapse{
+                        .navbar-nav{
+                            margin-left: 9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:995px) {
+        &{
+            .navbar{
+                .container{
+                    .collapse{
+                        .navbar-nav{
+                            margin-left: 5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        &{
+            .navbar{
+                .container{
+                    .collapse{
+                        .navbar-nav{
+                            margin-left: 0;
+                            li{
+                                a{
+                                    text-align: center;
+                                }
+                            }
+                        }
+    
+                        .search{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// 底部
+.footer{
+    background: #1e1e1e;
+    padding: 2em 0em;
+    // overflow: visible;
+    .navbar{
+        background: #1e1e1e;
+        border: 0;
+        .container{
+            .collapse{
+                padding: 0em;
+                .nav{
+                    padding: 2em 0em ;
+                    width: 100%;
+                    border-bottom: 1px solid #4b4b4b;
+                    // background: #1e1e1e;
+                    li{
+                        a{
+                            color: #c7c7c7;
+                            text-transform: uppercase;
+                            border-bottom: 3px solid transparent;
+                            transition: all linear .3s;
+
+                            &:hover{
+                                border-bottom: 3px solid #2583db;
+                            }
+                        }
+                    }
+                    .glyphicon{
+                        color: #c7c7c7;
+                        font-size: 2em;
+                        left: -20px;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    } 
+                }
+            }
+
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2em 0em 5em;
+                .info{
+                    color: #c7c7c7;
+                }
+                span{
+                    color: #c7c7c7;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:750px) {
+        &{
+            .navbar{
+                .container{
+                    .collapse{
+                        .nav{
+                            li{
+                                a{
+                                    text-align: center;
+                                }
+                            }
+                            .glyphicon{
+                                text-align: center;
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    .title{
+                        flex-wrap: wrap;
+                        .info{
+                            width: 100%;
+                            padding-bottom: 1em;
+                        }
+                        span{
+                            display: inline-block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:330px) {
+        &{
+            .navbar{
+                .container{
+                    .title{
+                        .info{
+                            font-size: .8em;
+                        }
+                        span{
+                            font-size: .8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// 返回顶部
+#gotop {
+    position: fixed;
+    bottom: 90px;
+    right: 0%;
+    width: 80px;
+    cursor: pointer;
+    z-index: -99998;
+    opacity: 0;
+
+    transition: all linear .4s;
+
+    &:hover {
+        animation: rubberBand 1s;
+    }
+
+    @keyframes rubberBand {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+      
+        30% {
+          transform: scale3d(1.25, 0.75, 1);
+        }
+      
+        40% {
+          transform: scale3d(0.75, 1.25, 1);
+        }
+      
+        50% {
+          transform: scale3d(1.15, 0.85, 1);
+        }
+      
+        65% {
+          transform: scale3d(.95, 1.05, 1);
+        }
+      
+        75% {
+          transform: scale3d(1.05, .95, 1);
+        }
+      
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+}
